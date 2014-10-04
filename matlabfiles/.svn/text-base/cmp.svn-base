@@ -1,0 +1,20 @@
+cd .
+
+g++  -I. -I~/CoinIpopt/include/coin/ -c PrioritizedNlp.cpp
+g++  -I. -I~/CoinIpopt/include/coin/ -c PrioritizedMain.cpp
+g++  -I. -I~/CoinIpopt/include/coin/ -c oneVoxel.cpp
+g++  -I. -I~/CoinIpopt/include/coin/ -c OptimizationImpl.cpp
+g++  -I. -I~/CoinIpopt/include/coin/ -c Matrix.cpp
+g++  -I. -I~/CoinIpopt/include/coin/ -c SparseMatrix.cpp
+g++  -I. -I~/CoinIpopt/include/coin/ -c HashTable.cpp
+g++  -I. -I~/CoinIpopt/include/coin/ -c HashMap.cpp
+g++  -I. -I~/CoinIpopt/include/coin/ -c Util.cpp
+g++  -I. -I~/CoinIpopt/include/coin/ -c FileManager.cpp
+g++  -I. -I~/CoinIpopt/include/coin/ -c StepIIImpl.cpp
+g++  -I. -I~/CoinIpopt/include/coin/ -c ProblemReps.cpp
+g++  -I. -I~/CoinIpopt/include/coin/ -c UiSetPair.cpp
+g++  -I. -I~/CoinIpopt/include/coin/ -c Constant.cpp
+
+g++  -I.  -I~/CoinIpopt/include/coin/  PrioritizedMain.cpp Constant.cpp UiSetPair.cpp StepIIImpl.cpp ProblemReps.cpp Matrix.cpp ProblemReps.h Util.cpp FileManager.cpp HashMap.cpp SparseMatrix.cpp HashTable.cpp   PrioritizedNlp.cpp oneVoxel.cpp OptimizationImpl.cpp  -L~/CoinIpopt/lib -lipopt -llapack -lblas -lm
+
+

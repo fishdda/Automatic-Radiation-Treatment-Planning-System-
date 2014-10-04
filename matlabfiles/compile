@@ -1,0 +1,7 @@
+#$ -cwd
+#$ -q six.q
+#$ -V
+
+/cluster/cloud/matlab/bin/matlab -nodisplay -nojvm < cloudcompile.m
+#/cluster/cloud/matlab/bin/matlab -nodisplay -nojvm < localcompile.m
+#/Users/parastiwari/Desktop/MATLAB_R2011a.app/bin/matlab < compile.m

@@ -1,0 +1,3 @@
+#!/bin/sh
+#$ -cwd
+./PrioritizedNlp cases30.txt

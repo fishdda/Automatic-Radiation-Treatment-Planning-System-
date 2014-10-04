@@ -1,0 +1,552 @@
+/*
+ * DoubleMatrices.cpp
+ *
+ *  Created on: Nov 19, 2011
+ *      Author: user
+ */
+
+#include "Matrices.h"
+
+Matrices::Matrices() {
+
+}
+Matrices::Matrices(const Matrices* cpm) {
+	this->mat = new ublas::compressed_matrix<double, ublas::row_major>(
+			(*(cpm->mat)));
+	row = cpm->mat->size1();
+	col = cpm->mat->size2();
+
+	this->rowNumber = cpm->rowNumber;
+	this->colNumber = cpm->colNumber;
+	this->value = cpm->value;
+}
+void Matrices::printMatAdd() {
+	printf("mat:%x\n", mat);
+}
+//Matrices::Matrices(double* r, double* c, double *val, int nonzerorow, int ro,
+//		int co) {
+//	row = ro;
+//	col = co;
+//
+////	printf("ijfdiNumber of rows:%d col:%d\n",row,col);
+//	//printf("Size of r:%d",sizeof(*r));
+////	printf("CReate matrix");
+//
+////	printf("First:%lf Last:%lf\n",r[0],r[nonzerorow-1]);
+////	printf("First col:%lf Last col:%lf\n",c[0],c[nonzerorow-1]);
+//
+//	this->createMatrices();
+//	int total = 0;
+//	for (int i = 0; i < nonzerorow; i++) {
+//		int rn = (int) r[i];
+//		int cn = (int) c[i];
+//				//printf("rn:%d,cn:%d\n",rn,cn);
+//		mat[rn - 1][cn - 1] = val[total];
+//		total++;
+//
+//	}
+////	printf("Done\n");
+//}
+//double Matrices::getAt(int r, int c) {
+//	assert(r<row);assert(c<col);
+//	//return mat[r][c];
+//	return mat(r,c);
+//	//return compressed_matrix(r,c);
+//}
+//double Matrices::average(int s,int e) {
+////double Matrices::average() {
+//	if (col != 1) {
+//		printf("Failed to calculate average\n");
+//		return 0;
+//	}
+//	//int s=0;
+//	//int e = row;
+//	double v = this->sum(s,e);
+//	int num = e-s;
+//	return v / num;
+//
+//}
+//double Matrices::average() {
+////double Matrices::average() {
+//	if (col != 1) {
+//		printf("Failed to calculate average\n");
+//		return 0;
+//	}
+//	//int s=0;
+//	//int e = row;
+//	double v = this->sum();
+//
+//	return v / row;
+//
+//}
+
+//void Matrices::getSubMatrices(double *rows, int numRow, Matrices *result) {
+//	for (int i = 0; i < numRow; i++) {
+//		for (int j = 0; j < col; j++) {
+//			int rnum = (int) rows[i];
+//			result->getMat()[i][j] = mat[rnum - 1][j];
+//		}
+//	}
+//}
+//Matrices::Matrices(boost::numeric::ublas::matrix_range < double > m) {
+void Matrices::print() {
+	for (int i = 0; i < (*mat).size1(); i++) {
+		for (int j = 0; j < (*mat).size2(); j++) {
+			if ((*mat)(i, j) != 0)
+				printf("mat[%d][%d]:%lf", i, j, (*mat)(i, j));
+			//std::cout<<"mat["<<i<<"]["<<j<<"]:"<<mat(i,j)<<std::endl;
+		}
+	}
+}
+Matrices::Matrices(ublas::compressed_matrix<double, ublas::row_major> *m) {
+//Matrices::Matrices(boost::numeric::ublas::matrix_range<boost::numeric::ublas::compressed_matrix<double> > m) {
+	mat = m;
+	row = (*m).size1();
+	col = (*m).size2();
+
+//	// TODO Auto-generated constructor stub
+//
+////	printf("r:%d %d\n", r, c);
+//	row = r;
+//	col = c;
+//	mat = NULL;
+////	printf("Row:%d\n", row);
+////	printf("col:%d\n", col);
+////	printf("Done");
+//	createMatrices();
+
+}
+/*
+ * Create a matrix of size r * 1 from double array.
+ * @Input
+ * 	x: The array that holds the element of matrix.
+ * 	r : The # of row in the matrix.
+ *
+ *
+ */
+//Matrices::Matrices(const double *x, int r) {
+//
+//	row = r;
+//	col = 1;
+//	createMatrices();
+//	for (int i = 0; i < row; i++) {
+//		mat[i][0] = x[i];
+//		//printf("x[%d]:%lf\n",i,mat[i][0]);
+//	}
+//}
+/**
+ * Set the i,jth entry of the matrix.
+ * @Input:
+ * 	row: Row Number of the matrix.
+ * 	col: Column number of the matrix.
+ * 	val: The value at row,col position
+ * @Author:
+ * 	Paras Babu Tiwari
+ */
+//void Matrices::setAt(int row,int col,double val)
+//{
+//	mat(row,col) =val;
+//}
+/**
+ * Get the double array corresponding the the matrix.
+ * The # of columns must be 1.
+ * @param:
+ * 	Input: None
+ * 	Output:
+ * 		x: An array to hold the double representation of the matrix.
+ */
+//void Matrices::getDouble(double *x) {
+//	if (col != 1)
+//		return ;
+//	//double *x = (double *) malloc(sizeof(double) * row);
+//	for (int i = 0; i < row; i++) {
+//		x[i] = mat[i][0];
+//	}
+//
+//}
+//double Matrices::getMax(int s,int e ) {
+////double Matrices::getMax() {
+//	//int s=0; int e = row;
+//	double max = 0;
+//	if (col != 1) {
+//		return -1;
+//	}
+//	for (int i = s; i < e; i++) {
+//		if (max < mat[i][0]) {
+//			max = mat[i][0];
+//		}
+//	}
+//	return max;
+//}
+//double Matrices::getMin(int s,int e) {
+////double Matrices::getMin() {
+//	double min = 999;
+//	//int s = 0;int e = row;
+//	if (col != 1) {
+//		return -1;
+//	}
+//	for (int i = s; i < e; i++) {
+//		if (mat[i][0]<min) {
+//			min = mat[i][0];
+//		}
+//	}
+//	return min;
+//}
+//double Matrices::getMax() {
+////double Matrices::getMax() {
+//	//int s=0; int e = row;
+//	double max = 0;
+//	if (col != 1) {
+//		return -1;
+//	}
+//	for (int i = 0; i < row; i++) {
+//		if (max < mat[i][0]) {
+//			max = mat[i][0];
+//		}
+//	}
+//	return max;
+//}
+//double Matrices::getMin() {
+////double Matrices::getMin() {
+//	double min = 999;
+//	//int s = 0;int e = row;
+//	if (col != 1) {
+//		return -1;
+//	}
+//	for (int i = 0; i < row; i++) {
+//		if (mat[i][0]<min) {
+//			min = mat[i][0];
+//		}
+//	}
+//	return min;
+//}
+//void Matrices::subfrom(double factor, int start, int end) {
+////	for (int i = start; i < end; i++) {
+////		for (int j = 0; j < col; j++) {
+////			mat[i][j] = factor - mat[i][j];
+////		}
+////	}
+//
+//}
+//double Matrices::multiplyAt(int i, int j, double val) {
+//	assert(mat != NULL);
+//	assert(i<row);
+//	assert(j<col);
+//	return val * mat(i,j);
+//}
+Matrices::~Matrices() {
+	delete mat;
+}
+
+//void Matrices::createMatrices() {
+//
+//	//printf("Inside cr\n");
+//	mat = (double **) calloc(row, sizeof(double *));
+//
+//	for (int i = 0; i < row; i++) {
+//		//printf("row:%d\n",i);
+//		//printf("inside create matrix\n ");
+//		mat[i] = (double *) calloc(col, sizeof(double));
+//		//printf("Setting zero\n");
+//		memset(mat[i], 0, sizeof(double) * col);
+//		//printf("Successfully set\n");
+//	}
+//
+//}
+//void Matrices::copy(Matrices *other, int start) {
+////	if((row != other->row)|| (col!=other->col) )
+////	{
+////		return;
+////	}
+////	printf("Inside copy\n");
+//	for (int i = start; i < (other->row + start); i++) {
+//		for (int j = 0; j < col; j++) {
+//			mat[i][j] = other->mat[i - start][j];
+//		}
+//	}
+//
+//}
+//void Matrices::vectorMultiply(Matrices *mat1, Matrices *mat2, Matrices *result) {
+//	for (int i = 0; i < mat1->row; i++) {
+//		result->mat[i][0] = mat1->mat[i][0] * mat2->mat[i][0];
+//	}
+//}
+void Matrices::divide(double factor) {
+	(*mat) /= factor;
+}
+PrioritizedMain::Vector* Matrices::matrixMultiply(PrioritizedMain::Vector *v) {
+
+	//ublas::vector<double> vec = v->V();
+	//time_t end_t;
+	//time_t start_t = time(NULL);
+	PrioritizedMain::Vector *result;
+	ublas::vector<double> vec((*mat).size1());
+	//printf("Matrix size:%d\n",this->row);
+	axpy_prod((*mat), v->V(), vec);
+	result = new PrioritizedMain::Vector(vec);
+	
+	//end_t = time(NULL);
+	//double diff = difftime(end_t, start_t);
+	//printf("matrix multiplication time:%lf\n", diff);
+	return result;
+//	boost::numeric::ublas::matrix_expression<double> m;
+//	boost::numeric::ublas::vector<double> v1;
+//	boost::numeric::ublas::axpy_prod(m,v1,true);
+//	int i = 0, j = 0;
+//	int rows1 = fMat->getRow();
+//	int col1 = fMat->getCol();
+//	int rows2 = mobj->getRow();
+//	int col2 = mobj->getCol();
+//	//fMat->printMatrices();
+//	//printf("Second Matrices\n\n");
+//	//mobj->printMatrices();
+//	//printf("Col2:%d\n", col2);
+//	if (col1 != rows2) {
+//
+//		printf("Can't Multiply These Matricies!\n");
+//
+//	} else {
+//
+//		double tempResult;
+//
+//		while (i < rows1) {
+//			//printf("i:%d\n",i);
+//
+//			while (j < col2) {
+//
+//				tempResult = 0;
+//
+//				for (int k = 0; k < rows2; k++) {
+//
+//					tempResult += fMat->mat[i][k] * mobj->mat[k][j];
+//					//printf("fmat[%d][%d]:%lf\n", i,k,fMat->mat[i][k]);
+//
+//				}
+//				//printf("j:%d\n",j);
+//				this->mat[i][j] = tempResult;
+//				j++;
+//			}
+//			i++;
+//			j = 0;
+//
+//		}
+//
+//	}
+//	//printf("Result\n\n");
+//	///this->printMatrices();
+
+}
+//void Matrices::divide(double factor) {
+//	assert(mat != NULL);
+//	mat = mat/factor;
+////	for (int i = 0; i < row; i++) {
+////		for (int j = 0; j < col; j++) {
+////			mat[i][j] = mat[i][j] / factor;
+////		}
+////	}
+//}
+//void Matrices::divide(double factor,int start,int end) {
+//	assert(mat != NULL);
+//	assert(end<=row);
+////	for (int i = start; i < end; i++) {
+////		for (int j = 0; j < col; j++) {
+////			mat[i][j] = mat[i][j] / factor;
+////		}
+////	}
+//}
+void Matrices::transpose()
+{
+	*mat = trans(*mat);
+}
+PrioritizedMain::Vector* Matrices::matrixTransMultiply(PrioritizedMain::Vector *v) {
+
+	//ublas::vector<double> vec = v->V();
+	PrioritizedMain::Vector *result;
+	ublas::vector<double> vec((*mat).size1());
+	//transpose();
+	//axpy_prod((*mat), v->V(), vec);
+	axpy_prod(v->V(),(*mat), vec);
+	result = new PrioritizedMain::Vector(vec);
+	return result;
+}
+void Matrices::multiply(double factor) {
+
+	//assert(mat != NULL);
+	(*mat) = (*mat) * factor;
+//	for (int i = 0; i < row; i++) {
+//		for (int j = 0; j < col; j++) {
+//			mat[i][j] = mat[i][j] * factor;
+//		}
+//	}
+}
+//void Matrices::substract(double factor) {
+//
+//	//assert(mat != NULL);
+//	mat -= factor;
+////	for (int i = 0; i < row; i++) {
+////		for (int j = 0; j < col; j++) {
+////			mat[i][j] = mat[i][j] - factor;
+////		}
+////	}
+//}
+//void Matrices::substract(double factor, int start,int end) {
+//
+//	int i=0;
+//	i = i+start;
+//	//printf("i:%d Start:%d\n",i,start);
+//	for ( ; i < end; i++) {
+//		for (int j = 0; j < col; j++) {
+//			mat[i][j] = mat[i][j] - factor;
+//		}
+//	}
+//}
+
+//void Matrices::subfrom(double factor) {
+//
+////	for (int i = 0; i < row; i++) {
+////		for (int j = 0; j < col; j++) {
+////			mat[i][j] = factor - mat[i][j];
+////		}
+////	}
+//	mat = factor - mat;
+//}
+//void Matrices::printMatrices() {
+//	int i = 0, j = 0;
+//	//printf("Row:%d,Col:%d\n", row, col);
+//	while (i < row) {
+//		while (j < col) {
+//			//if(mat[i][j] != 0)
+//			{
+//				//printf("mat[%d][%d]:%lf\n", i, j, mat[i][j]);
+//				printf("%lf \n", mat(i,j));
+//
+//			}
+//			j++;
+//		}
+//		j = 0;
+//		//printf(";");
+//		i++;
+//	}
+//}
+void Matrices::copyNzEl(int *iRow, int *iCol, double *value,int &l, int &total)
+{
+	typedef ublas::compressed_matrix<double, ublas::row_major>::iterator1 it1_t;
+	typedef ublas::compressed_matrix<double, ublas::row_major>::iterator2 it2_t;
+
+	for (it1_t it1 = (*mat).begin1(); it1 != (*mat).end1(); it1++)
+	{
+	  for (it2_t it2 = it1.begin(); it2 != it1.end(); it2++)
+	  {
+	    printf("%d,%d:",it2.index1() ,it2.index2() );
+		printf("%lf\n",*it2);
+	    //std::cout << *it2 << std::endl;
+		  if(value==NULL)
+		  {
+			  iRow[total] = l;
+			  iCol[total] = it2.index2();
+			  total++;
+			  break;
+		  }
+		  else
+		  {
+			  value[total] = *it2;
+			  total++;
+		  }
+	  }
+	}
+}
+void Matrices::printNonZeroEntry() {
+	int i = 0, j = 0;
+	//printf("Row:%d,Col:%d\n", row, col);
+	while (i < row) {
+		while (j < col) {
+			double v = (*mat)(i, j);
+			if (v != 0) {
+				printf("mat[%d][%d]:%lf\n", i, j, v);
+				//printf("%lf \n",  mat[i][j]);
+
+			}
+			j++;
+		}
+		j = 0;
+		//printf(";");
+		i++;
+	}
+}
+//double Matrices::sum() {
+////double Matrices::sum(int s,int end) {
+//	long double x = 0;
+//	if (col != 1) {
+//		return -1;
+//	}
+//	for (int i = 0; i < row; i++) {
+//		x += mat[i][0];
+//	}
+//	return x;
+//}
+// double Matrices::sum(int s,int end) {
+////double Matrices::sum(int s,int end) {
+//	long double x = 0;
+//	if (col != 1) {
+//		return -1;
+//	}
+//	for (int i = s; i < end; i++) {
+//		x += mat[i][0];
+//	}
+//	return x;
+//}
+/*
+ * Sum the matrix elements. It groups the matrix column-wise and sum all the elements in a particular column.
+ * [ a11 a12 ..a1n]
+ * [ a21 a22 ..a2n]
+ * [ ...  ... .. . ]
+ * [ am1 am2... amn]
+ * sum: [(a11+a21+...+am1) (a12+a22+...+am2) ... (a1n+a2n+...+amn)]
+ */
+void Matrices::colSums(double *result, int &total,int n) {
+	int j;
+	PrioritizedMain::Vector *vec;
+	boost::numeric::ublas::vector<double> v;
+
+	for (j = 0; j < col; j++) {
+		v = boost::numeric::ublas::column((*mat), j);
+		vec = getVector(v);
+		long double s = vec->sum();
+		if (s != 0) {
+			result[total] = s/n;
+			total++;
+		}
+		delete vec;
+	}
+
+}
+/*
+ * Sum the matrix elements. It groups the matrix column-wise and sum all the elements in a particular column.
+ * [ a11 a12 ..a1n]
+ * [ a21 a22 ..a2n]
+ * [ ...  ... .. . ]
+ * [ am1 am2... amn]
+ * sum: [(a11+a21+...+am1) (a12+a22+...+am2) ... (a1n+a2n+...+amn)]
+ */
+void Matrices::colSums(double *result) {
+	int j;
+	PrioritizedMain::Vector *vec;
+	boost::numeric::ublas::vector<double> v;
+	for (j = 0; j < col; j++) {
+		v = boost::numeric::ublas::column((*mat), j);
+		vec = getVector(v);
+		result[j] += vec->sum();
+		delete vec;
+	}
+
+}
+PrioritizedMain::Vector* Matrices::getVector(
+		boost::numeric::ublas::vector<double> v) {
+	return new PrioritizedMain::Vector(v);
+}
+//void Matrices::copy(double **src,Matrices *dest,int size)
+//{
+//
+//		memcpy(dest, src, size);
+//
+//}

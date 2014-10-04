@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/imrt/svn/!svn/ver/5109/trnk/ipopt/src/steps
+END
+StepIIImpl.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/imrt/svn/!svn/ver/5099/trnk/ipopt/src/steps/StepIIImpl.cpp
+END
+StepIVmpl.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/imrt/svn/!svn/ver/5086/trnk/ipopt/src/steps/StepIVmpl.cpp
+END
+StepIImpl.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/imrt/svn/!svn/ver/5086/trnk/ipopt/src/steps/StepIImpl.cpp
+END
+StepImpl.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/imrt/svn/!svn/ver/5109/trnk/ipopt/src/steps/StepImpl.cpp
+END

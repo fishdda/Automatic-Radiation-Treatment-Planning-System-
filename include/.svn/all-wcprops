@@ -1,0 +1,131 @@
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/imrt/svn/!svn/ver/5111/trnk/ipopt/src/include
+END
+Constant.h
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/imrt/svn/!svn/ver/5111/trnk/ipopt/src/include/Constant.h
+END
+ProblemReps.h
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/imrt/svn/!svn/ver/5086/trnk/ipopt/src/include/ProblemReps.h
+END
+HashTable.h
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/imrt/svn/!svn/ver/1982/trnk/ipopt/src/include/HashTable.h
+END
+StepImpl.h
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/imrt/svn/!svn/ver/5108/trnk/ipopt/src/include/StepImpl.h
+END
+oneVoxel.h
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/imrt/svn/!svn/ver/2682/trnk/ipopt/src/include/oneVoxel.h
+END
+Vector.h
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/imrt/svn/!svn/ver/5086/trnk/ipopt/src/include/Vector.h
+END
+UiSetPair.h
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/imrt/svn/!svn/ver/1982/trnk/ipopt/src/include/UiSetPair.h
+END
+StepIImpl.h
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/imrt/svn/!svn/ver/5086/trnk/ipopt/src/include/StepIImpl.h
+END
+Matrices.h
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/imrt/svn/!svn/ver/5108/trnk/ipopt/src/include/Matrices.h
+END
+OptimizationImpl.h
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/imrt/svn/!svn/ver/5086/trnk/ipopt/src/include/OptimizationImpl.h
+END
+FileManager.h
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/imrt/svn/!svn/ver/2745/trnk/ipopt/src/include/FileManager.h
+END
+Util.h
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/imrt/svn/!svn/ver/1982/trnk/ipopt/src/include/Util.h
+END
+PrioritizedNlp.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/imrt/svn/!svn/ver/5017/trnk/ipopt/src/include/PrioritizedNlp.hpp
+END
+Result.h
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/imrt/svn/!svn/ver/1993/trnk/ipopt/src/include/Result.h
+END
+StepIIImpl.h
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/imrt/svn/!svn/ver/5086/trnk/ipopt/src/include/StepIIImpl.h
+END
+MatlabCommunicationManager.h
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/imrt/svn/!svn/ver/5108/trnk/ipopt/src/include/MatlabCommunicationManager.h
+END
+HashMap.h
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/imrt/svn/!svn/ver/1984/trnk/ipopt/src/include/HashMap.h
+END
+SparseMatrix.h
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/imrt/svn/!svn/ver/5100/trnk/ipopt/src/include/SparseMatrix.h
+END
+StepIVmpl.h
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/imrt/svn/!svn/ver/5086/trnk/ipopt/src/include/StepIVmpl.h
+END
+stdinc.h
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/imrt/svn/!svn/ver/5039/trnk/ipopt/src/include/stdinc.h
+END
+DummyMatlabComm.h
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/imrt/svn/!svn/ver/1994/trnk/ipopt/src/include/DummyMatlabComm.h
+END

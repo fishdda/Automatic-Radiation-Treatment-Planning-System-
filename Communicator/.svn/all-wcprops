@@ -1,0 +1,71 @@
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/imrt/svn/!svn/ver/5106/trnk/ipopt/src/Communicator
+END
+PrioritizedNlp.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/imrt/svn/!svn/ver/5097/trnk/ipopt/src/Communicator/PrioritizedNlp.cpp
+END
+Result.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/imrt/svn/!svn/ver/1984/trnk/ipopt/src/Communicator/Result.cpp
+END
+oneVoxel.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/imrt/svn/!svn/ver/2771/trnk/ipopt/src/Communicator/oneVoxel.cpp
+END
+MatlabCommunicationManager.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/imrt/svn/!svn/ver/5106/trnk/ipopt/src/Communicator/MatlabCommunicationManager.cpp
+END
+compile
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/imrt/svn/!svn/ver/1982/trnk/ipopt/src/Communicator/compile
+END
+DummyMatlabComm.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/imrt/svn/!svn/ver/1982/trnk/ipopt/src/Communicator/DummyMatlabComm.cpp
+END
+OptimizationImpl.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/imrt/svn/!svn/ver/5086/trnk/ipopt/src/Communicator/OptimizationImpl.cpp
+END
+PrioritizedMain.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/imrt/svn/!svn/ver/5097/trnk/ipopt/src/Communicator/PrioritizedMain.cpp
+END
+FileManager.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/imrt/svn/!svn/ver/2745/trnk/ipopt/src/Communicator/FileManager.cpp
+END
+ProblemReps.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/imrt/svn/!svn/ver/5086/trnk/ipopt/src/Communicator/ProblemReps.cpp
+END
+Util.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/imrt/svn/!svn/ver/1982/trnk/ipopt/src/Communicator/Util.cpp
+END

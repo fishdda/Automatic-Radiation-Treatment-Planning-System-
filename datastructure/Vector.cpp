@@ -1,0 +1,223 @@
+/*
+ * Vector.cpp
+ *
+ *  Created on: Nov 28, 2012
+ *      Author: parastiwari
+ */
+
+#include "Vector.h"
+
+namespace PrioritizedMain {
+
+Vector::Vector() {
+	// TODO Auto-generated constructor stub
+
+}
+Vector::Vector(int s) {
+	using namespace boost::numeric::ublas;
+	v = new vector<double>(s);
+
+
+}
+Vector::Vector(boost::numeric::ublas::vector<double> ublasVector) {
+	// TODO Auto-generated constructor stub
+	v = new boost::numeric::ublas::vector<double>(ublasVector);
+}
+Vector::Vector(const double *x, const size_t s) {
+	// TODO Auto-generated constructor stub
+	//v = new boost::numeric::ublas::vector<double>(s,*x);
+	v = new boost::numeric::ublas::vector<double>(s);
+	for (int i = 0; i < s; i++) {
+		v->insert_element(i, x[i]);
+	}
+//	for(int i=0;i<s;i++)
+//					std::cout<<(*v)(i)<<std::endl;
+	//v(s, r(s, x));
+	//v(s,x);
+	//v.resize(s,false);
+	//v(s,*x);
+	//new(&v) boost::numeric::ublas::vector(s,*x);
+	//std::copy(v.begin(),v.end(),x);
+	//std::cout<<"Size:"<< v->size()<<endl;
+}
+Vector::~Vector() {
+	// TODO Auto-generated destructor stub
+	delete v;
+}
+void Vector::sort()
+{
+	std::sort(v->begin(), v->end());
+
+}
+/**
+ * Return the minimum element in the range s<=i<=e of the vector.
+ * @Input
+ * 	s: Starting Address
+ * 	e: End Address.
+ * @Return:
+ * 	min: Minimum element among V(s..e)
+ * 	@Author: Paras Babu Tiwari
+ */
+double Vector::getMin(int s, int e) {
+//double Matrices::getMin() {
+	double min = 999;
+
+	for (int i = s; i < e; i++) {
+		if (V()[i] < min) {
+			min = V()[i];
+		}
+	}
+	return min;
+}
+/**
+ * Return the minimum element of the vector.
+ * @Input
+ * 	None
+ * @Return:
+ * 	min: Minimum element of the vector
+ * 	@Author: Paras Babu Tiwari
+ */
+double Vector::getMin() {
+//double Matrices::getMin() {
+	return getMin(0, V().size());
+}
+/**
+ * Return the maximum element in the range s<=i<=e of the vector.
+ * @Input
+ * 	s: Starting Address
+ * 	e: End Address.
+ * @Return:
+ * 	min: Maximum element among v(s..e)
+ * 	@Author: Paras Babu Tiwari
+ */
+double Vector::getMax(int s, int e) {
+
+	double max = 0;
+
+	for (int i = s; i < e; i++) {
+		if (max < V()[i]) {
+			max = V()[i];
+		}
+	}
+	return max;
+}
+/**
+ * Return the maximum element of the vector.
+ * @Input
+ * 	None
+ * @Return:
+ * 	min: Maximum element of the vector
+ * 	@Author: Paras Babu Tiwari
+ */
+double Vector::getMax() {
+
+	double max = 0;
+	max = getMax(0, V().size());
+	return max;
+}
+//double Vector::average(int s,int e) {
+//
+//	double v = this->sum(s,e);
+//	int num = e-s;
+//	return v / num;
+//
+//}
+double Vector::average() {
+
+	double s = this->sum();
+
+	return s / V().size();
+
+}
+long double Vector::sum() {
+	boost::numeric::ublas::scalar_vector<double> u(V().size(),1);
+	double s = inner_prod(V(), u);
+
+	return s;
+
+}
+Vector* Vector::operator-(double factor) {
+	using namespace boost::numeric::ublas;
+	scalar_vector<double> sv(V().size(), factor);
+	vector<double> r;
+	r = V() - sv;
+	//delete v;
+	*v = r;
+//	for(int i=0;i<r.size();i++){
+//		std::cout<<r(i)<<std::endl;
+//		std::cout<<V()(i)<<std::endl;
+//	}
+	return this;
+}
+Vector* Vector::subFrom(double factor) {
+	using namespace boost::numeric::ublas;
+	scalar_vector<double> sv(V().size(), factor);
+	vector<double> r;
+	r =sv-V();
+	//delete v;
+	*v = r;
+//	for(int i=0;i<r.size();i++){
+//		std::cout<<r(i)<<std::endl;
+//		std::cout<<V()(i)<<std::endl;
+//	}
+	return this;
+}
+Vector* Vector::operator/(double factor) {
+	using namespace boost::numeric::ublas;
+	vector<double> r;
+	r = V() / factor;
+	*v = r;
+	return this;
+}
+Vector* Vector::operator*(double factor) {
+	using namespace boost::numeric::ublas;
+	vector<double> r;
+	r = V() * factor;
+	*v = r;
+	return this;
+}
+double Vector::operator*(Vector *vec) {
+
+	return inner_prod(this->V(), vec->V());
+	//return this;
+
+}
+Vector *Vector::square() {
+	using namespace boost::numeric::ublas;
+	vector<double> r;
+	r = element_prod(this->V(), this->V());
+	//delete v;
+	*v = r;
+	return this;
+}
+int Vector::size() {
+	return V().size();
+}
+double *Vector::getDblArray() {
+	return &V().data()[0];
+}
+//inline double Vector::getAt(int i) {
+//	return V()(i);
+//}
+void Vector::print() {
+	for (int i = 0; i < v->size(); i++)
+		if (getAt(i) != 0)
+			//printf("%d:%lf\n", i, getAt(i));
+			printf("%lf\n",getAt(i));
+}
+void Vector::printAll() {
+	for (int i = 0; i < v->size(); i++)
+
+			//printf("%d:%lf\n", i, getAt(i));
+			printf("%lf\n",getAt(i));
+}
+//void Vector::divide(double factor)
+//{
+//	v = v/factor;
+//}
+//void Vector::substract(double factor)
+//{
+//	boost::numeric::ublas::scalar_vector<double> sv (v.size(),factor);
+//	v = v - sv;
+//}
+} /* namespace PrioritizedMain */

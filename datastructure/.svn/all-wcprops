@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/imrt/svn/!svn/ver/5107/trnk/ipopt/src/datastructure
+END
+HashMap.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/imrt/svn/!svn/ver/1984/trnk/ipopt/src/datastructure/HashMap.cpp
+END
+SparseMatrix.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/imrt/svn/!svn/ver/5098/trnk/ipopt/src/datastructure/SparseMatrix.cpp
+END
+Vector.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/imrt/svn/!svn/ver/5086/trnk/ipopt/src/datastructure/Vector.cpp
+END
+UiSetPair.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/imrt/svn/!svn/ver/1982/trnk/ipopt/src/datastructure/UiSetPair.cpp
+END
+Matrices.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/imrt/svn/!svn/ver/5107/trnk/ipopt/src/datastructure/Matrices.cpp
+END
+HashTable.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/imrt/svn/!svn/ver/1982/trnk/ipopt/src/datastructure/HashTable.cpp
+END

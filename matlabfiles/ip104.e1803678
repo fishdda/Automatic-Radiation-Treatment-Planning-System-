@@ -1,0 +1,14 @@
+{??? Error using ==> load
+Unable to read file /home/research/tiwarip/imrt/case104.mat: No such file or
+directory.
+
+Error in ==> getInfluenceMatrix at 7
+eval(['load ' loadDirectory 'case',int2str(patID), '.mat']); %_9b_s1_th01
+} 
+{??? Error using ==> save
+Variable 'morganId' not found.
+} 
+{??? Error using ==> save
+Variable 'targets' not found.
+} 
+
